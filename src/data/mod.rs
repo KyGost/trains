@@ -1,15 +1,15 @@
 mod map;
 mod stop;
-mod train;
 mod switch;
+mod train;
 
 use freds::Inline;
 pub use {map::Map, stop::Stop, switch::Switch, train::Train};
 
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Clone)]
 pub struct Line {
-    point_a: Inline,
-    point_b: Inline,
+    pub point_a: Inline,
+    pub point_b: Inline,
 }
 impl From<Line> for Vec<u8> {
     fn from(line: Line) -> Vec<u8> {
@@ -19,7 +19,7 @@ impl From<Line> for Vec<u8> {
     }
 }
 
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Clone)]
 pub struct Position {
     pub x: u64,
     pub y: u64,

@@ -3,7 +3,7 @@ use {
     freds::{Data, Error, Inline, InlineData, ReferentialData},
 };
 
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Clone)]
 pub struct Stop {
     pub position: Position,
     pub connection_a: Inline,

@@ -5,3 +5,5 @@ edition = "2021"
 
 [dependencies]
 freds = { version = "0.1", features = ["read", "write"] }
+dialoguer = { version = "0.10", features = []}
+async-trait = "0.1"
