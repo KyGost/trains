@@ -1,12 +1,13 @@
 use {
-    crate::Train,
+    crate::{Stop, Switch, Train},
     freds::{Data, Error, InlineData, ReferentialData},
 };
 
+#[derive(Default, Debug)]
 pub struct Map {
     pub trains: Vec<Train>,
-    //pub stops: Vec<Stop>,
-    //pub switches: Vec<Switch>,
+    pub stops: Vec<Stop>,
+    pub switches: Vec<Switch>,
 }
 
 impl Data for Map {

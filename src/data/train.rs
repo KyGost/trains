@@ -3,6 +3,7 @@ use {
     freds::{Data, Error, InlineData, ReferentialData},
 };
 
+#[derive(Default, Debug)]
 pub struct Train {
     pub orientation: bool,
     pub speed: u64,
